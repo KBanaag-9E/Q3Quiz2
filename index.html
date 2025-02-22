@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -21,12 +21,12 @@
 
 <!-- Programmed with the aid of my older brother -->
 <script type="text/javascript">
-	function sumbit() {
+	function user() {
 		var name = document.getElementById('inputName').value;
 		
-		alert('Thank you for choosing to cruise with us, ' + name '!');	
-		}
-	
+		alert('Thank you for choosing to cruise with us, ' + name + '!');	
+	}
+
 	function price() {
 		var amt = document.getElementById('num').value;
 		var inside = document.getElementById('cabin').value;
@@ -38,7 +38,7 @@
 			"suite": 1318 * amt
 		}
 
-		alert(`The price is $${prices[inside]} USD.`);
+		alert(`The price is $${prices[inside]} USD.`)
 	}
 </script>
 
@@ -52,16 +52,16 @@
 					Personal Information
 				</summary>
 					<div>
-						<label for="inputName">Full Name</label>
+						<label for="InputName">Full Name</label>
 						<input type="text" class="form-control" id="inputName">
 					</div>
 
-					<div class="password mb-3"> <!--div for password-->
+					<div class="mb-3">
 						<label for="inputEmail">Email Address</label>
 						<input type="email" class="form-control" id="inputEmail">
 					</div>
 
-					<button type="submit" class="btn btn-success" onclick="sumbit()">Sumbit Info</button>
+					<button type="button" class="btn btn-success" onclick="user()">Submit Info</button>
 			</details>
 		</div>
 
@@ -78,10 +78,10 @@
 						<div class="password mb-3"> <!--div for password-->
 							<label for="inputEmail">Choose a Cabin:</label> <br>
 								<select name="class" id="cabin" class="form-control">
-									<option value="inside" >Inside cabin</option>
-									<option value="ocean" onclick="">Oceanview cabin</option>
-									<option value="balcony" onclick="">Balcony cabin</option>
-									<option value="suite" onclick="">Suite</option>
+									<option value="inside">Inside cabin</option>
+									<option value="ocean">Oceanview cabin</option>
+									<option value="balcony">Balcony cabin</option>
+									<option value="suite">Suite</option>
 								</select>
 						</div>
 
