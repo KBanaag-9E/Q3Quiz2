@@ -1,0 +1,31 @@
+* {
+	margin: 10px;
+}
+
+h1 {
+	background-color: #3B6064;
+	color: white;
+	border-radius: 10px;
+}
+
+body {
+	font-family: fredoka;
+	background-color: #C9E4CA;
+	text-align: center;
+}
+
+.container-fluid {
+	background-color: #87BBA2;
+	border-radius: 10px;
+}
+
+details {
+	background-color: #C9E4CA;
+	border-radius: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+a {
+	color: #3B6064;
+}

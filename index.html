@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- SETUP BOOTSTAP: link to Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<!-- link to JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+	<title>Ticketing Q3Q2</title>
+</head>
+<body>
+
+<!-- Programmed with the aid of my older brother -->
+<script type="text/javascript">
+	function price() {
+		var amt = document.getElementById('num').value;
+		var inside = document.getElementById('cabin').value;
+
+		var prices = {
+			"inside": 528 * amt,
+			"ocean": 707 * amt,
+			"balcony": 828 * amt,
+			"suite": 1318 * amt
+		}
+
+		alert(`The price is $${prices[inside]} USD.`)
+	}
+</script>
+
+<div class="container-fluid">
+	<br> <h1>Cruise Ship Ticketing Center</h1>
+
+	<div class="d-flex container">
+		<div class="container">
+			<details ontoggle>
+				<summary>
+					Personal Information
+				</summary>
+					<div>
+						<label for="inputName">Full Name</label>
+						<input type="text" class="form-control" id="inputName">
+					</div>
+
+					<div class="password mb-3"> <!--div for password-->
+						<label for="inputEmail">Email Address</label>
+						<input type="email" class="form-control" id="inputEmail">
+					</div>
+
+					<button type="submit" class="btn btn-success">Sumbit Info</button>
+			</details>
+		</div>
+
+		<div class="container">
+			<details ontoggle>
+				<summary>
+					Ticket Price
+				</summary>
+						<div>
+							<label for="inputName">Amount of Tickets</label> <br>
+							<input type="number" class="form-control" id="num" name="quantity" min="1" max="25">
+						</div>
+
+						<div class="password mb-3"> <!--div for password-->
+							<label for="inputEmail">Choose a Cabin:</label> <br>
+								<select name="class" id="cabin" class="form-control">
+									<option value="inside" >Inside cabin</option>
+									<option value="ocean" onclick="">Oceanview cabin</option>
+									<option value="balcony" onclick="">Balcony cabin</option>
+									<option value="suite" onclick="">Suite</option>
+								</select>
+						</div>
+
+						<button type="button" class="btn btn-success" onclick="price()">Ticket Price</button>
+			</details>
+		</div>
+
+		<div class="container">
+			<details ontoggle>
+				<summary>
+					Download Ticket
+				</summary>
+						<div>
+							<img src="https://static.vecteezy.com/system/resources/previews/022/943/123/non_2x/classic-retro-ticket-for-cinema-circus-movie-theatre-cruise-concert-and-other-events-old-vintage-style-in-pastel-colors-vector.jpg" width="80%">
+
+							<p><a href="https://www.vecteezy.com/vector-art/22943123-classic-retro-ticket-for-cinema-circus-movie-theatre-cruise-concert-and-other-events-old-vintage-style-in-pastel-colors">Download Soft Copy Ticket Format</a>
+						</div>
+
+						<button type="button" class="btn btn-success" onclick="alert('Check your email to download your ticket(s). Thank you for cruising with us!')">Purchase Ticket(s)</button>
+
+						<button type="button" id="reload" class="ms-3 btn btn-success" onClick="window.location.reload()">Buy More Tickets</button>
+			</details>
+		</div>
+	</div>
+
+	<div class="footer container-fluid">
+		<h5><a href="https://kbanaag-9e.github.io/Q2EX2-Kyla-Banaag/" target="_blank">Kyla Limuelle Banaag | 9-E</a></h5>
+	</div>
+</div>
+
+</body>
+</html>
