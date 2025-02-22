@@ -21,6 +21,12 @@
 
 <!-- Programmed with the aid of my older brother -->
 <script type="text/javascript">
+	function sumbit() {
+		var name = document.getElementById('inputName').value;
+		
+		alert('Thank you for choosing to cruise with us, ' + name '!');	
+		}
+	
 	function price() {
 		var amt = document.getElementById('num').value;
 		var inside = document.getElementById('cabin').value;
@@ -32,7 +38,7 @@
 			"suite": 1318 * amt
 		}
 
-		alert(`The price is $${prices[inside]} USD.`)
+		alert(`The price is $${prices[inside]} USD.`);
 	}
 </script>
 
@@ -55,7 +61,7 @@
 						<input type="email" class="form-control" id="inputEmail">
 					</div>
 
-					<button type="submit" class="btn btn-success">Sumbit Info</button>
+					<button type="submit" class="btn btn-success" onclick="sumbit()">Sumbit Info</button>
 			</details>
 		</div>
 
